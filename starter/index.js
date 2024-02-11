@@ -73,17 +73,9 @@ const employee = [
 //then append to the classes to create the objects  
 
 
-const text = render(employee)
-
-
 
 writeFileAsync('index.html', render(employee))
   .then(() => console.log('Successfully wrote to index.html'))
   .catch((err) => console.error(err));
 
 
-
-// promptUser()
-// .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-// .then(() => console.log('Successfully wrote to index.html'))
-// .catch((err) => console.error(err));
