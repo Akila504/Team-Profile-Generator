@@ -24,58 +24,76 @@ const outputPath = path.join('./output', "team.html");
 
 //So use inquire to prompt the questions  
 
-// const questions = [
-//   {
-//     type: "input",
-//     name: 'manager',
-//     message: "What is your name ?"
+const questions = [
+  {
+    type: "input",
+    name: 'manager',
+    message: "What is your name ?"
 
-//   },
-//   {
-//     type: "input",
-//     name: 'id',
-//     message: "What is your id ?"
-//   },
-//   {
-//     type: "input",
-//     name: 'email',
-//     message: "What is your email ?"
-//   }
-//   ,
+  },
+  {
+    type: "input",
+    name: 'id',
+    message: "What is your id ?"
+  },
+  {
+    type: "input",
+    name: 'email',
+    message: "What is your email ?"
+  }
+  ,
 
-//   {
-//     type: "input",
-//     name: 'officeNumber',
-//     message: "What is your office number ?"
-//   }
-//   ,
-//   {
-//     type: 'rawlist',
-//     name: 'menu',
-//     message: 'What do you want to do now ?',
-//     choices: ['Add an engineer', 'Add an Intern', 'Finish building the team ']
-//   }
-// ]
-
-// const promptUser = () =>
-//   inquirer.prompt(questions);
+  {
+    type: "input",
+    name: 'officeNumber',
+    message: "What is your office number ?"
+  }
+  ,
+  {
+    type: 'rawlist',
+    name: 'menu',
+    message: 'What do you want to do now ?',
+    choices: ['Add an engineer', 'Add an Intern', 'Finish building the team']
+  }
+]
 
 
-const employee = [
-  new Manager('akila', 'questions.', 'questionsemail', 'officeNumber'),
-  new Engineer('akila', 'questions.', 'questionsemail', 'officeNumber'),
-  new Intern('akila', 'questions.', 'questionsemail', 'officeNumber')]
+const promptUser = () =>
+  inquirer.prompt(questions);
 
 
-// console.log(employee[0].getRole() === "Manager")
+promptUser()
+  .then((data) => {
+    if (data.menu === 'Finish building the team') {
+      process.exit();
+    }
+    else {
+      inquirer.prompt([
+        {
+          type: "confirm",
+          name: "choice",
+          message: "Play Again?"
+        }])
+    }
+  }
+  ).catch((err) => console.log(err))
 
-//then save the data
-//then append to the classes to create the objects  
+// quit(); {
+//   console.log("\nGoodbye!");
+//   process.exit(0);
+// }
 
 
 
-writeFileAsync('index.html', render(employee))
-  .then(() => console.log('Successfully wrote to index.html'))
-  .catch((err) => console.error(err));
+
+// const employee = [
+//   new Manager('akila', 'questions.', 'questionsemail', 'officeNumber'),
+//   new Engineer('akila', 'questions.', 'questionsemail', 'officeNumber'),
+//   new Intern('akila', 'questions.', 'questionsemail', 'officeNumber')]
+
+
+// writeFileAsync('index.html', render(employee))
+//   .then(() => console.log('Successfully wrote to index.html'))
+//   .catch((err) => console.error(err));
 
 
