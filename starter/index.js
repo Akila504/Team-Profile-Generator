@@ -77,13 +77,13 @@ const EngineerQs = [
     type: "input",
     name: 'EngineerGithub',
     message: "What is the Engineers Github?"
-  },
-  {
-    type: 'rawlist',
-    name: 'menu',
-    message: 'What do you want to do now ?',
-    choices: ['Add an engineer', 'Add an Intern', 'Finish building the team']
   }
+  // {
+  //   type: 'rawlist',
+  //   name: 'menu',
+  //   message: 'What do you want to do now ?',
+  //   choices: ['Add an engineer', 'Add an Intern', 'Finish building the team']
+  // }
 ]
 
 
@@ -110,13 +110,13 @@ const InternQs = [
     type: "input",
     name: 'School',
     message: "What is the Interns School?"
-  },
-  {
-    type: 'rawlist',
-    name: 'menu',
-    message: 'What do you want to do now ?',
-    choices: ['Add an engineer', 'Add an Intern', 'Finish building the team']
   }
+  // {
+  //   type: 'rawlist',
+  //   name: 'menu',
+  //   message: 'What do you want to do now ?',
+  //   choices: ['Add an engineer', 'Add an Intern', 'Finish building the team']
+  // }
 ]
 
 
