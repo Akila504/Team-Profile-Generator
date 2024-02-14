@@ -21,10 +21,12 @@
 
    ## Installation 
    NA  
-   ## Usage 
-   
-  Here is what the potential README will look like
-  ![Here is what the potential README will look like](assets/Screenshot.jpeg)  
+   ## Usage  
+
+  Here is what the potential html will look like
+  ![Here is what the potential README will look like](assets/Screenshot.jpeg)   
+
+  
    ## Licence 
    MIT  
    ## Contributions 
